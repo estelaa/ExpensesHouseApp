@@ -1,0 +1,13 @@
+.card{
+    margin: 3%;
+    /*border: 0;*/
+}
+li {
+    list-style-type: none;
+}
+
+button.btn.btn-secondary.btn-back{
+    margin-left: 5%;
+}
+
+

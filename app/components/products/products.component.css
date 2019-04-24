@@ -1,0 +1,74 @@
+.row{
+  margin-left: 20px;
+}
+.col-md-6 {
+  float: center;
+  margin: 5%;
+ 
+}
+.col-lg-4 {
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 4%;
+}
+
+  .card{
+    margin-bottom: 3%;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+  }
+  
+  li{
+    border: none;
+  }
+  a {
+    color: #888;
+    text-decoration: none;
+    border: none;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  a:hover {
+    color:#607D8B;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  
+  button.btn.btn-primary {
+    margin: 3%;
+  }
+
+
+  .form-group{
+    position: relative;
+    margin: 3%;
+    width: 50%;
+  }
+
+  select.form-control.form-control-lg{
+    position: relative;
+    width: 50%;
+    margin: 3%;
+    font-size: 90%;
+  }
+
+  option {
+    font-size: 90%;
+  }
+
+  button.btn.btn-success{
+    position: relative;
+    margin: 3%;
+  }
+
+  button.btn.btn-danger{
+    position: relative;
+     margin: 3%;
+  }
+
+  .a.page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #558B2F;
+    border-color: #558B2F;
+}
+  

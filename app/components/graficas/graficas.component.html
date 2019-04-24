@@ -1,0 +1,63 @@
+
+<div class="chart-pier" style="width: 25rem;">
+  <div class="card" >
+      <div class="card-body">
+          <h5 class="card-title">Pagaments últim període per usuari</h5>
+          <ngx-charts-pie-chart
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="single"
+            [legend]="showLegendPie"
+            [explodeSlices]="explodeSlices"
+            legend=""
+            [doughnut]="doughnut"
+            [gradient]="gradient"
+            (select)="onSelect($event)">
+          </ngx-charts-pie-chart>
+      </div>
+  </div>
+</div>
+
+<div class="card" >
+    <div class="card-body">
+        <h5 class="card-title">Pagaments últim període per tipus</h5>
+        <ngx-charts-bar-vertical
+          [view]="view2"
+          [results]="data"
+          xAxis="true"
+          yAxis="true"
+          legend=""
+          legendTitle="false"
+          showXAxisLabel="true"
+          showYAxisLabel="true"
+          [legend]="showLegend"
+          xAxisLabel=""
+          yAxisLabel="">
+        </ngx-charts-bar-vertical>
+    </div>
+</div>
+
+  
+<div class="card" >
+    <div class="card-body">
+        <h5 class="card-title">Pagaments últims mesos</h5>
+        <ngx-charts-line-chart
+          [view]="view3"
+          [scheme]="colorScheme"
+          [results]="multi"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="showLegend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel"
+          [autoScale]="autoScale"
+          [timeline]="timeline"
+          (select)="onSelect($event)">
+        </ngx-charts-line-chart>
+      </div>
+    </div>
+    
+ 

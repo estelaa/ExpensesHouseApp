@@ -1,0 +1,29 @@
+
+ <!-- <h1>Iniciar sesión</h1>
+  
+  <form class="form">
+    <input type="text" #username name="username" placeholder="Username">
+    <input type="password" #password name="password" placeholder="Password">
+    <button type="submit" (click)="logIn(username.value, password.value, $event)" id="login-button">Login</button>
+    <button type="submit" (click)="test()" id="test-button">Test</button>
+  </form>
+-->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="login-page">
+
+      <form class="form">
+        <input type="text" #username placeholder="Username" name="username" required/>
+        <input type="password" #password placeholder="Password" name="password" required/>
+        <button type="submit" (click)="logIn(username.value, password.value, $event)" id="login-button">Login </button>
+        <p class="message">Not registered? <a href="#">Create an account</a></p>
+        
+        <div *ngIf="showUserNotExist">
+          <p class="info">El usuario o  contraseña no son correctos</p>
+        </div>
+
+      </form>
+   
+  </div>
+

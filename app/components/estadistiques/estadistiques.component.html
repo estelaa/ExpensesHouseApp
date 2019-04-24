@@ -1,0 +1,71 @@
+<div class="row" style="height:100%">
+    <div class="col-xs sidevar">
+         <app-menu></app-menu>
+    </div>  
+    <div class="col">
+      <!--TO-DO-->
+      <h3>Estadístiques</h3>
+      <form class="form-inline">
+          <div class="form-group">
+            <div class="input-group">
+              <label>Data inici </label>
+              <input class="form-control" 
+                     name="dp1" [(ngModel)]="inici" ngbDatepicker #d="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+              </div>
+            </div>
+          </div>
+            <div class="form-group">
+              <div class="input-group">
+                <label>Data final </label>
+                <input class="form-control" 
+                       name="dp2" [(ngModel)]="final" ngbDatepicker #e="ngbDatepicker">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar" (click)="e.toggle()" type="button"></button>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success" (click)="submit()">Submit</button>
+          </form>
+      <hr>
+
+        <div *ngIf="showCharts">
+            <div class="container">
+                <div class="card pie" >
+                    <div class="card-body">
+                        <h5 class="card-title">Pagaments per usuari</h5>
+                        <ngx-charts-pie-chart
+                          [view]="view"
+                          [scheme]="colorScheme"
+                          [results]="pie"
+                          [legend]="showLegendPie"
+                          [explodeSlices]="explodeSlices"
+                          legend=""
+                          [doughnut]="doughnut"
+                          [gradient]="gradient"
+                          (select)="onSelect($event)">
+                        </ngx-charts-pie-chart>
+                      </div>
+                </div>
+                <div class="card barvertical" >
+                  <div class="card-body">
+                        <h5 class="card-title">Pagaments per tipus</h5>
+                        <ngx-charts-bar-vertical
+                          [view]="view2"
+                          [results]="barvertical"
+                          xAxis="true"
+                          yAxis="true"
+                          legend=""
+                          legendTitle="false"
+                          showXAxisLabel="true"
+                          showYAxisLabel="true"
+                          [legend]="showLegend"
+                          xAxisLabel=""
+                          yAxisLabel="">
+                        </ngx-charts-bar-vertical>
+                  </div>
+              </div>
+        </div>
+    </div>
+</div>

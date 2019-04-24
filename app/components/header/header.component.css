@@ -1,0 +1,14 @@
+
+
+.icon-home{
+    background-image: url(../../../image/round_menu_white_24dp.png)
+}
+
+.icon-logout{
+    background-image: url(../../../image/logout.svg)
+}
+
+.d-inline-block{
+    margin-right: 2%;
+}
+

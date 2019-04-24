@@ -1,0 +1,41 @@
+
+<!--
+<nav class="navbar navbar-expand navbar-light bg-ligh shadow" style="background-color: #558B2F;">
+
+    <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-light" type="button" id="dropdownBasic1" aria-expanded="false" aria-label="Toggle navigation" ngbDropdownToggle>
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem (click)="goHome()">Home</button>
+            <button ngbDropdownItem (click)="goUpload()">Upload File</button>
+            <button ngbDropdownItem (click)="goListElements()">List Items</button>
+          </div>
+      </div> 
+ 
+  <span class="fill-remaining-space">Houselhold Expenses</span>Application Title
+
+      <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-light" id="dropdownBasic3" ngbDropdownToggle>{{userLogged.name}}</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic3" class=".dropdown-menu{-sm|-md|-lg|-xl}-right." data-display="static" aria-haspopup="true" aria-expanded="false">
+            <button ngbDropdownItem (click)="goLogin()">Logout</button>
+          </div>
+      </div>
+  
+</nav>-->
+
+      <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+          </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button"  (click)="seeSidevar()" data-toggle="collapse" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+
+

@@ -1,0 +1,58 @@
+.col-xs.sidevar{
+    min-height: 1000px;
+    background-color: #343a40;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+}
+
+.col{
+    margin: 3%;
+}
+
+
+  button.calendar, button.calendar:active {
+    width: 2.75rem;
+    background-image: url(../../../image/outline-calendar_today-24px.svg)!important;
+    background-repeat: no-repeat;
+    background-size: 23px;
+    background-position: center;
+}
+
+svg.ngx-charts {
+    margin-top: 0%;
+    margin-bottom: 3%
+}
+
+.chart-pier {
+    padding-left: 0%;
+    margin: 3%;
+    margin-bottom: 10%;
+}
+
+.card{
+    border: none;
+}
+
+.form-group {
+    margin-top: 2%;
+    margin-right: 3%;
+}
+
+label{
+    margin-right: 2%; 
+}
+
+input.form-control.ng-untouched.ng-pristine.ng-valid {
+    border-radius: 3px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row ;
+  }
+
+  button.btn.btn-success {
+    margin-top: 2%;
+}
+
+

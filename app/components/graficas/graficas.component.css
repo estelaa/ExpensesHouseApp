@@ -1,0 +1,35 @@
+
+ul.legend-labels{
+    font-family: "Roboto", sans-serif;
+    background: #FFFFFF;
+    border-color: #000000;
+    border: 1%;
+}
+
+svg.ngx-charts {
+    margin-top: 0%;
+    margin-bottom: 3%
+}
+
+.chart-pier {
+    padding-left: 0%;
+    margin: 3%;
+    margin-bottom: 10%;
+}
+
+.card{
+    border: none;
+}
+
+.chart-legend {
+    line-height: 85%;
+    list-style: none;
+    text-align: left;
+    float: left;
+    width: 50px; 
+    border-radius: 3px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+    background: rgba(0,0,0,.05);
+}

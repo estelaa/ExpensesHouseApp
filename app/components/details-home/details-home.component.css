@@ -1,0 +1,20 @@
+
+.card{
+    position: relative;
+    top: 4em;
+    left: 15%;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+
+}
+ul.list-group.list-group-flush {
+    list-style-type: none;
+}
+
+.card.month {
+    margin-top: 10%;
+}
+
+.card.deutes {
+    margin-top: 8%;
+    margin-left: -12%
+}

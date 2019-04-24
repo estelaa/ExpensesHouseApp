@@ -1,0 +1,49 @@
+<nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+        <div class="sidebar-header">
+            <div class="user-info">
+                <div class="user-pic">
+                    <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                              alt="User picture">
+                          </div>
+                <span class="user-name"><strong>{{userLogged.name}}</strong></span>
+                <span class="user-role">User</span>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a (click)="goHome()"> 
+                        <span>Home</span>
+                    </a>
+                </li>
+                 
+                <li>
+                    <p>
+                        <a (click)="isCollapsed = !isCollapsed"
+                            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">Movimients
+                        </a>
+                    </p>
+                        <div id="collapseExample" [ngbCollapse]="!isCollapsed">
+                            <ul>
+                                <li>
+                                    <a (click)="goShowList()">Llistat de pagaments</a>
+                                </li>
+                                <li>
+                                    <a (click)="goAddElement()">Afegir pagament</a>
+                                </li>
+                                <li>
+                                    <a (click)="goUpload()">Afegir pagaments fitxer</a>
+                                </li>
+                            </ul>
+                        </div>     
+                </li>
+                <li>
+                    <a (click)="goEstadistiques()" >
+                        <span>Estadístiques</span>
+                    </a>         
+                </li>
+            </ul> 
+    </div>
+</nav>

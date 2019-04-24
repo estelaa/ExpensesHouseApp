@@ -1,0 +1,20 @@
+<div class="row" style="height:100%">
+  <div class="col-xs sidevar">
+       <app-menu></app-menu>
+  </div>  
+  <div class="col">   
+      <h5>Modificar deute del usuari {{debt.user}} a {{debt.userToPaid}}</h5>
+      <form>   
+          <div class="form-group">
+            <input type="number" #cost class="form-control" placeholder={{debt.cost}} name="cost"/>
+          </div>         
+      </form>
+      <button type="submit" class="btn btn-success save" (click)="edit(cost.value)">Save</button>  
+  
+        <p *ngIf="error">
+            <ngb-alert [dismissible]="false" [type]="alert.type">
+              <strong>Error</strong> No s'ha modificat el deute.
+            </ngb-alert>
+        </p>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="row">
+      <div class="col-lg-4">
+          <div class="card" style="width: 25rem;">
+            <div class="card-body">
+              <h5 class="card-title">Moviments període actual</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                          <th scope="col">Concepte</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Paid</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let product of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                        <td>
+                            <a routerLink="/detail/{{product.id}}"> {{product.name}}  </a>
+                        </td>
+                        <td>{{product.date}}</td>
+                        <td>{{product.price}} €</td>
+                      </tr>
+                    </tbody>
+                </table>
+                  <ngb-pagination style="background-color: #558B2F"
+                  [(page)]="page"
+                  [pageSize]="pageSize"
+                  [collectionSize]="products.length"></ngb-pagination>
+              </div>
+            </div>
+              <button type="button" class="btn btn-primary" (click)="goCalcul()">
+                Calcular gastos
+              </button>              
+              <button type="submit"  class="btn btn-danger" (click)="open('focusFirst')">    
+                Finalitzar periode            
+              </button>  
+              <app-details-home></app-details-home>
+      </div>
+    <div class="col-lg-4">
+        <app-graficas></app-graficas>
+    </div>
+</div>
+
+
+
+

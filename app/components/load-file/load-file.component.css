@@ -1,0 +1,43 @@
+.row {
+    
+}
+
+.col-xs.sidevar{
+    /*margin-left: 3%;*/
+    /* margin-top: 2%; */
+   
+  
+    min-height: 1000px;
+    background-color: #343a40;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+}
+select.form-control.form-control-lg.ng-pristine.ng-valid.ng-touched {
+    width: max-content;
+}
+
+.col{
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    margin-top: 3%;
+}
+
+button.btn.btn-info{
+    margin-left: 3%;
+}
+
+button.btn.btn-info.add{
+    margin-top: 5%;
+}
+
+select.form-control.form-control-lg {
+    width: 50%;
+    font-size: 75%;
+    height: 75%;
+}

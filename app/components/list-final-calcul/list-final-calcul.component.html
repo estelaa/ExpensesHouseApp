@@ -1,0 +1,21 @@
+
+<div class="card" style="width: 25rem;">
+  <div class="card-body">
+      <h5 class="card-tittle">Comptes sense deutes</h5>
+      <li *ngFor="let item of items" >
+          <p class="card-text"> {{item}} €</p>
+      </li>   
+  </div>
+</div>
+
+
+<div class="card" style="width: 25rem;">
+  <div class="card-body">
+      <h5 class="card-tittle">Comptes amb deutes</h5>
+      <li *ngFor="let debt of debts" >
+          <p class="card-text"> {{debt}} €</p>
+      </li>   
+  </div>
+</div>
+
+<button type="submit"  class="btn btn-secondary btn-back" (click)="goBack()">Back</button>  

@@ -1,0 +1,48 @@
+<div class="row" style="height:100%">
+    <div class="col-xs sidevar">
+         <app-menu></app-menu>
+    </div>  
+    <div class="col">
+      <form>
+        <h3>Moviments</h3>
+        <div class="form-group form-inline">
+            Full text search: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
+            <span class="ml-3" *ngIf="service.loading$ | async">Loading...</span>
+        </div>
+      
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" sortable="name" (sort)="onSort($event)">Name</th>
+           <th scope="col" sortable="date" (sort)="onSort($event)">Date</th>
+            <th scope="col" sortable="type" (sort)="onSort($event)">Type</th>
+            <th scope="col" sortable="username" (sort)="onSort($event)">Username</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let moviment of moviments$ | async">
+            <th scope="row">{{ moviment.id }}</th>
+            <td><ngb-highlight [result]="moviment.name" [term]="service.searchTerm"></ngb-highlight></td>
+            <td><ngb-highlight [result]="moviment.date" [term]="service.searchTerm"></ngb-highlight></td>
+            <td><ngb-highlight [result]="moviment.type" [term]="service.searchTerm"></ngb-highlight></td>
+            <td><ngb-highlight [result]="moviment.username" [term]="service.searchTerm"></ngb-highlight></td>
+          </tr>
+          </tbody>
+        </table>
+      
+        <div class="d-flex justify-content-between p-2">
+          <ngb-pagination
+            [collectionSize]="total$ | async" [(page)]="service.page" [pageSize]="service.pageSize">
+          </ngb-pagination>
+      
+          <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+            <option [ngValue]="10">10 items per page</option>
+            <option [ngValue]="20">20 items per page</option>
+            <option [ngValue]="50">50 items per page</option>
+          </select>
+        </div>
+      
+      </form>
+    </div>
+</div>

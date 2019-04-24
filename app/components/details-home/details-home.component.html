@@ -1,0 +1,31 @@
+
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        <b>Total:</b> {{total}} €
+    </div>
+    <ul class="list-group list-group-flush">
+      <li *ngFor="let element of elements">
+          <span class="list-group-item"> <b>{{element.name}}: </b>{{element.value}} € </span> 
+      </li>    
+    </ul>
+</div>
+
+
+<div class="card deutes" style="width: 28rem;">
+    <div class="card-header">
+        <b>Deutes</b>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li *ngFor="let debt of debts">
+          <span class="list-group-item"> L'usuari <b>{{debt.user}}</b> té un deute amb <b>{{debt.userToPaid}}</b> de {{debt.cost}} €  
+          <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-succes" id="dropdownBasic1" ngbDropdownToggle></button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem (click)="editDebt(debt.id)">Modificar</button>
+              <button ngbDropdownItem (click)="delDebt(debt.id)">Eliminar</button>
+            </div>
+          </div>
+          </span>
+        </li>    
+    </ul>
+</div>

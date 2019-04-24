@@ -1,0 +1,53 @@
+<div class="row" style="height:100%">
+    <div class="col-xs sidevar">
+         <app-menu></app-menu>
+    </div>  
+    <div class="col">
+        <div class="card" style="width: 25rem;">
+            <div class="card-body">
+              <h5 class="card-tittle">Afegir un moviment</h5>
+              <form>
+                  <div class="form-group">
+                    <input type="text" #name class="form-control" placeholder="Name" name="name" required/>
+                  </div>
+                  <div class="form-group">
+                    <input type="number" #price class="form-control" placeholder="Price" name="price" required/>
+                  </div>
+                                  
+                  <select class="form-control form-control-lg" #type>
+                      <option>Menjar</option>
+                      <option>Restaurant/Bar</option>
+                      <option>Gasolina</option>
+                      <option>Oci</option>
+                      <option>Productes casa</option>
+                  </select>
+                
+                  <button type="submit"  class="btn btn-success" 
+                        (click)="addElement(name.value, price.value, type.value)">Afegir</button>           
+              </form>  
+        
+            </div>
+        </div>
+        <div class="card" style="width: 25rem;">
+          <h5 class="card-tittle">Afegir un deute</h5>
+          <form>
+            <div class="form-group">
+              <input type="text" #userToPaid class="form-control" placeholder="Persona a pagar" name="userToPaid" required/>
+            </div>
+            <div class="form-group">
+              <input type="number" #cost class="form-control" placeholder="Cost" name="cost" required/>
+            </div>           
+            <button type="submit"  class="btn btn-success" 
+              (click)="addDebt(userToPaid.value, cost.value)">Afegir</button>   
+          </form>
+
+          <p *ngIf="sameUser">
+            <ngb-alert [dismissible]="false">
+              <strong>Error</strong> La persona a pagar ha de ser diferent al vostre usuari
+            </ngb-alert>
+          </p>
+        </div>
+    </div>
+</div>
+
+ 
